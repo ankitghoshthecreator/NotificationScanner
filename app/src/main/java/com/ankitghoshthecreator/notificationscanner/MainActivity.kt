@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
             val message = editText.text.toString()
             if (message.isNotEmpty()) {
                 sendNotification(message)
+
+                // Clear the EditText after sending the notification
+                editText.text.clear()
             } else {
                 Toast.makeText(this, "Please enter a message", Toast.LENGTH_SHORT).show()
             }
